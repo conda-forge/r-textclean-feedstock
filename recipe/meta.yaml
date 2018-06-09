@@ -1,4 +1,4 @@
-{% set version = '0.7.2' %}
+{% set version = "0.9.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,7 +11,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/textclean_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/textclean/textclean_{{ version }}.tar.gz
-  sha256: a3a2ff273815b3020468e77b0ec8d1d5bf20c144c3e88bff226f0c79e299e88d
+  sha256: 4b6ace9073c06ea8162917f6c7092515953cecfab4b13accf4205bc4569ec5f5
 
 build:
   number: 0
