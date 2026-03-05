@@ -1,4 +1,4 @@
-{% set version = '0.9.3' %}
+{% set version = "0.9.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/textclean_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/textclean/textclean_{{ version }}.tar.gz
-  sha256: 3f6f3b0abaa3567a1d29f5457087aad31277f3c1473747989c9804479881f24d
+  sha256: 48928230498ad807bee75cb7e1e1490bef93536b2c45cc9d237a38825b26b732
 
 build:
   noarch: generic
-  number: 1006
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,12 +51,8 @@ test:
 about:
   home: https://github.com/trinker/textclean
   license: GPL-2
-  summary: Tools to clean and process text.  Tools are geared at checking for substrings that
-    are not optimal for analysis and replacing or removing them (normalizing) with more
-    analysis friendly substrings (see Sproat, Black, Chen, Kumar, Ostendorf, & Richards
-    (2001) <doi:10.1006/csla.2001.0169>) or extracting them into new variables. For
-    example, emoticons are often used in text but not always easily handled by analysis
-    algorithms.  The replace_emoticon() function replaces emoticons with word equivalents.
+  summary: Tools to clean and process text.  Tools are geared at checking for substrings that are not optimal for analysis and replacing or removing them (normalizing) with more analysis friendly substrings (see Sproat, Black, Chen, Kumar, Ostendorf, & Richards (2001) <doi:10.1006/csla.2001.0169>) or extracting them 
+    into new variables. For example, emoticons are often used in text but not always easily handled by analysis algorithms.  The replace_emoticon() function replaces emoticons with word equivalents.
   license_family: GPL2
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
